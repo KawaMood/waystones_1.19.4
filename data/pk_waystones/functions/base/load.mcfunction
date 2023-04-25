@@ -16,6 +16,9 @@
 # - $pk.waystones.settings.limit_per_server pk.value | default: (undefined) | if set, defines the maximal amount of Waystones the server can contain
 # - $pk.waystones.settings.ignore_monsters pk.value | default: (undefined) | <=0 = disallow Waystones use if a monster is nearby | (undefined) or >=1 = ignore
 # - $pk.waystones.settings.legacy_textures pk.value | default: (undefined) | (undefined) or <=0 = disable | >=1 = use legacy Waystone textures
+#
+# /!\ Specific settings that need to be toggle using commands (function pk_waystones:cmd/settings/<path>)
+# - $pk.waystones.settings.name_visibility pk.value | default: (undefined) | (undefined) or <=0 = hide | >=1 = use show Waystones names above themselves
 
 # Special tags:
 # - pk.dev : Allow player to see data packs specific logs
@@ -79,7 +82,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 4 run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 5 run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:
