@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/helpers/settings/name_visibility/update/trigger
+#> pk_waystones:blocks/waystone/helpers/settings/name_visibility/update/after_1s_trigger
 
 # Prepare score
 data modify storage pk.common:data Temp.Waystone set from entity @s data.Waystone
